@@ -9,17 +9,20 @@
         body {
             margin: 0;
             padding: 0;
-            color: #e0e0e0; /* Cor do texto geral */
+            color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: 
-                radial-gradient(circle at top, rgba(255,255,200,0.04), transparent 45%),
+                /* Brilho no topo */
+                radial-gradient(circle at top, rgba(255,255,200,0.06), transparent 50%),
+                /* Listras Diagonais Mais Claras */
                 repeating-linear-gradient(
                     135deg,
-                    #0b0b0b,
-                    #0b0b0b 25px,
-                    #0f0f0f 25px,
-                    #0f0f0f 50px
+                    #151515,
+                    #151515 25px,
+                    #1a1a1a 25px,
+                    #1a1a1a 50px
                 );
+            background-attachment: fixed; /* Mantém o fundo parado ao rolar */
         }
 
         header {
