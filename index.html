@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wiki oficial do jogo O Lugar - Complexo e experimentos.">
     <title>O Lugar — Wiki</title>
-
     <style>
+        :root {
+            --bg-color: #151515;
+            --bg-alt: #1a1a1a;
+            --text-color: #e0e0e0;
+            --accent-red: #ff5555;
+            --accent-light-red: #ff7777;
+            --accent-orange: #ffaa88;
+            --border-color: #333;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            color: #e0e0e0;
+            color: var(--text-color);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: 
-                /* Brilho no topo */
                 radial-gradient(circle at top, rgba(255,255,200,0.06), transparent 50%),
-                /* Listras Diagonais Mais Claras */
-                repeating-linear-gradient(
-                    135deg,
-                    #151515,
-                    #151515 25px,
-                    #1a1a1a 25px,
-                    #1a1a1a 50px
-                );
-            background-attachment: fixed; /* Mantém o fundo parado ao rolar */
+                repeating-linear-gradient(135deg, var(--bg-color), var(--bg-color) 25px, var(--bg-alt) 25px, var(--bg-alt) 50px);
+            background-attachment: fixed;
+            line-height: 1.6;
         }
 
         header {
             background: #111;
             padding: 40px 20px;
             text-align: left;
-            border-bottom: 3px solid #ff5555;
+            border-bottom: 3px solid var(--accent-red);
         }
 
         header h1 {
             margin: 0;
-            color: #ff5555;
+            color: var(--accent-red);
             font-size: 2.5em;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -52,25 +55,24 @@
         }
 
         h2 {
-            color: #ff7777;
-            border-bottom: 1px solid #333;
+            color: var(--accent-light-red);
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 10px;
             margin-top: 40px;
         }
 
         h3 {
-            color: #ffaa88;
+            color: var(--accent-orange);
             margin-top: 25px;
         }
 
         section {
-            margin-bottom: 60px;
-            line-height: 1.6;
+            margin-bottom: 50px;
         }
 
         .box {
             background: rgba(255, 85, 85, 0.05);
-            border-left: 4px solid #ff5555;
+            border-left: 4px solid var(--accent-red);
             padding: 20px;
             margin: 25px 0;
             font-style: italic;
@@ -87,25 +89,26 @@
 
         /* Estilo para as imagens e áudios */
         .gallery-item {
-            background: #1a1a1a;
-            padding: 15px;
+            background: var(--bg-alt);
+            padding: 20px;
             border-radius: 5px;
             margin-bottom: 20px;
             list-style: none;
+            border: 1px solid #222;
         }
 
-        img {
+        .gallery-item img {
             max-width: 100%;
             height: auto;
-            border: 1px solid #333;
-            margin-top: 10px;
+            border: 1px solid var(--border-color);
+            margin-top: 15px;
             display: block;
         }
 
         audio {
             width: 100%;
             margin-top: 10px;
-            filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Torna o player mais visível no escuro */
+            filter: invert(100%) hue-rotate(180deg) brightness(1.5);
         }
 
         footer {
@@ -115,15 +118,24 @@
             font-size: 0.85em;
             color: #666;
             border-top: 1px solid #222;
+            margin-top: 50px;
         }
 
         strong {
-            color: #ffaa88;
+            color: var(--accent-orange);
+        }
+
+        a {
+            color: var(--accent-light-red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
     <link rel="icon" href="sun.ico" type="image/x-icon">
 </head>
-
 <body>
 
     <header>
@@ -134,26 +146,16 @@
     <main>
         <section>
             <h2>Visão Geral</h2>
-            <p>
-                <strong>O Lugar</strong> é um jogo de atmosfera sombria ambientado em um complexo infantil aparentemente comum, construído sobre experimentos secretos envolvendo almas humanas e uma substância chamada <strong>Ser</strong>.
-            </p>
-            <p>
-                O jogador assume o papel de <strong>Player</strong>, que explora o complexo enquanto tenta resgatar seu irmão e descobrir a verdade por trás dos experimentos.
-            </p>
+            <p><strong>O Lugar</strong> é um jogo de atmosfera sombria ambientado em um complexo infantil aparentemente comum, construído sobre experimentos secretos envolvendo almas humanas e uma substância chamada <strong>Ser</strong>.</p>
+            <p>O jogador assume o papel de <strong>Player</strong>, que explora o complexo enquanto tenta resgatar seu irmão e descobrir a verdade por trás dos experimentos.</p>
         </section>
 
         <section>
             <h2>Conceitos Principais</h2>
             <h3>Ser</h3>
-            <p>
-                O Ser é um líquido receptáculo utilizado como base física dos experimentos. Ele reage à intenção, consciência e ao espírito, mas não é compatível com almas humanas puras.
-            </p>
-
+            <p>O Ser é um líquido receptáculo utilizado como base física dos experimentos. Ele reage à intenção, consciência e ao espírito, mas não é compatível com almas humanas puras.</p>
             <h3>Núcleo de Deus</h3>
-            <p>
-                O Núcleo de Deus é a fonte primária de <strong>Ser</strong> e <strong>Espírito</strong> (alma, memória, identidade e outros aspectos). Ele sustenta todo o sistema experimental do complexo.
-            </p>
-
+            <p>O Núcleo de Deus é a fonte primária de <strong>Ser</strong> e <strong>Espírito</strong> (alma, memória, identidade e outros aspectos). Ele sustenta todo o sistema experimental do complexo.</p>
             <div class="box">
                 Após ??? absorver grande parte do Núcleo de Deus, ele se tornou extremamente instável, enquanto o Núcleo enfraqueceu drasticamente.
             </div>
@@ -172,7 +174,6 @@
             <h2>Experimentos de Destaque</h2>
             <h3>Sunny — Experimento 001</h3>
             <p>Criado a partir do Ser e de uma única alma funcional. Possui aparência amigável e comportamento protetor, sendo o principal aliado do Player.</p>
-
             <h3>Experimento 01</h3>
             <p>Extremamente inteligente, com capacidade sobre-humana. Sua ambição o levou a ???, iniciando mutações físicas irreversíveis.</p>
         </section>
@@ -181,42 +182,29 @@
             <h2>Personagens Principais</h2>
             <h3>Lumi</h3>
             <p>A IA do complexo. Atua como cuidadora e guia. Existem modelos derivados dela espalhados pelo mapa.</p>
-            
             <h3>Ember</h3>
             <p>Entidade de fogo, teimosa e com temperamento difícil. Apesar disso, é uma cozinheira excepcional.</p>
-
             <h3>Eclipse</h3>
             <p>Dotado de força física absurda e um senso de justiça inabalável. Atua como o protetor do grupo.</p>
-
             <h3>Midnight</h3>
             <p>O pilar de calma. Independente, ele ajuda os outros a encontrar segurança e sono em meio ao caos.</p>
-
             <h3>Pinkie</h3>
-            <p>Calma, timida as vezes, mas sabe lidar com seus problemas, e é ótima em ensinar coisas.</p>
-
+            <p>Calma, tímida às vezes, mas sabe lidar com seus problemas, e é ótima em ensinar coisas.</p>
             <h3>Rags</h3>
-            <p>Muito sociavel, se preocupa demais com os outros, vive fazendo artes e costurando.</p>
-
+            <p>Muito sociável, se preocupa demais com os outros, vive fazendo artes e costurando.</p>
         </section>
 
         <section>
-            <section>
             <h2>Arquivos Classificados</h2>
             <ul style="list-style: none; padding: 0;">
-
                 <li class="gallery-item">
                     <strong>Banco de Dados Externo</strong><br>
-                    <p><strong>ARG:</strong></p>
-                    <a href="https://sunbeam-interactive.github.io/subject-files/" target="_blank">
-                        Acessar Subject Files →
-                    </a>
+                    <p><strong>ARG:</strong> <a href="https://sunbeam-interactive.github.io/subject-files/" target="_blank">Acessar Subject Files →</a></p>
                 </li>
-                
                 <li class="gallery-item">
                     <strong>Supernova</strong><br>
-                    <img src="john-doe.webp" alt="Visual de Supernova" width="215" height="200">
+                    <img src="john-doe.webp" alt="Ilustração do Experimento Supernova">
                 </li>
-
                 <li class="gallery-item">
                     <strong>Registro de Áudio: ???</strong><br>
                     <p><small>Captura 01 (Reverso):</small></p>
@@ -224,18 +212,14 @@
                         <source src="monstro-reverso.mp3" type="audio/mpeg">
                         Seu navegador não suporta áudio.
                     </audio>
-
-                    <p><small>Captura 02 (Normal):</small></p>
+                    <p style="margin-top:15px;"><small>Captura 02 (Normal):</small></p>
                     <audio controls>
                         <source src="monstro-normal.mp3" type="audio/mpeg">
                         Seu navegador não suporta áudio.
                     </audio>
                 </li>
-
             </ul>
         </section>
-
-
     </main>
 
     <footer>
