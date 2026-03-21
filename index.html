@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Wiki oficial do jogo O Lugar - Complexo e experimentos secretos. Explore os mistérios de Sunny's Playstation.">
-    <title>O Lugar. — Wiki Oficial</title>
+    <title>O Lugar — Wiki Oficial</title>
     <link rel="icon" href="sun.ico" type="image/x-icon">
     <style>
         :root {
@@ -198,43 +198,30 @@
         }
 
         /* Galeria e Itens */
-   /* Altera a galeria para exibir um item embaixo do outro */
-.gallery-list {
-    display: flex;
-    flex-direction: column; /* Empilha os itens */
-    gap: 40px; /* Espaço entre cada bloco */
-    padding: 0;
-}
+        .gallery-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 0;
+        }
 
-/* Remove a "caixa" (fundo, bordas e padding exagerado) */
-.gallery-item {
-    background: transparent;
-    padding: 0;               /* Remove o espaçamento interno */
-    border: none;             /* Remove a borda */
-    display: block;           /* Comportamento de texto normal */
-}
-
-/* Garante que as imagens fiquem uma embaixo da outra e centralizadas se quiser */
-.gallery-item img {
-    display: block;
-    margin: 20px 0;           /* Espaço em cima e embaixo da imagem */
-    max-width: 100%;          /* Não deixa a imagem estourar a tela */
-    height: auto;
-}
+        .gallery-item {
+            background: var(--bg-alt);
+            padding: 25px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
     
-.gallery-item strong {
-    display: block;
-    margin-bottom: 10px;
-}
+        audio {
+            width: 100%;
+            margin-top: 15px;
+            filter: invert(90%) hue-rotate(180deg) brightness(1.2);
+            height: 35px;
+        }
 
-audio {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 10px 0 20px 0;
-    filter: grayscale(100%) brightness(1.1);
-}
-       
         footer {
             text-align: center;
             padding: 60px 20px;
@@ -260,131 +247,12 @@ audio {
             border-bottom-color: var(--accent-light-red);
             text-shadow: 0 0 8px rgba(255, 119, 119, 0.5);
         }
-        
-    header h1 { font-size: 2em; letter-spacing: 4px; }
-    .filter-btn { padding: 8px 12px; font-size: 0.7em; }
-          main {
-    width: 100%;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 0 12px;
-}
-        .filter-container {
-    justify-content: center;
-    padding: 10px;
-}
-        p {
-    text-align: left;
-    word-break: normal;
-    hyphens: auto;
-}
-        header {
-    padding: 40px 15px;
-}
 
-section {
-    margin-bottom: 30px;
-}
-        * {
-    box-sizing: border-box;
-}
-
-.filter-btn {
-    flex: 1 1 auto;
-    text-align: center;
-}
-          
-    (max-width: 600px) {
-        
-    header {
-        padding: 40px 15px;
-    }
-
-    header h1 {
-        font-size: 2em;
-        letter-spacing: 2px;
-    }
-
-    header p {
-        font-size: 0.8em;
-        letter-spacing: 2px;
-    }
-
-    main {
-        padding: 0 15px;
-        margin: 20px auto;
-    }
-
-    h2 {
-        font-size: 1.4em;
-        margin-top: 40px;
-    }
-
-    h3 {
-        font-size: 1.1em;
-    }
-
-    p {
-        font-size: 1em;
-        line-height: 1.6;
-    }
-
-    .filter-container {
-        padding: 10px;
-        gap: 6px;
-    }
-
-    .filter-btn {
-        padding: 8px 10px;
-        font-size: 0.65em;
-    }
-
-    .box {
-        padding: 15px;
-        font-size: 0.9em;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    audio {
-        max-width: 100%;
-    }
-}
-    p {
-        color: var(--accent-orange);
-        margin-top: 35px;
-        font-size: 1.4em;
-        display: flex;
-        text-shadow: 0 10px 30px rgba(255, 119, 119, 0.5);
-
-        .filter-container {
-    overflow-x: auto;
-    justify-content: flex-start;
-}
-
-.filter-container::-webkit-scrollbar {
-    height: 6px;
-}
-
-.filter-container::-webkit-scrollbar-thumb {
-    background: var(--accent-red);
-}
-        p {
-    word-wrap: break-word;
-}
-        img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-    }
-}
-        body {
-    -webkit-text-size-adjust: 100%;
-}
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2em; letter-spacing: 4px; }
+            .filter-btn { padding: 8px 12px; font-size: 0.7em; }
+        }
     </style>
 </head>
 <body>
@@ -448,7 +316,7 @@ section {
             </article>
             <article>
                 <h3>Experimento ?</h3>
-                <img src="aaaa.jpeg" width="200" height="200" alt="Registro Visual do Player">
+                <img src="aaaa.jpeg" width="200" alt="Registro Visual do Player">
             </article>
         </section>
 
@@ -496,15 +364,15 @@ section {
                 </article>
                 <article class="gallery-item">
                     <strong>Supernova</strong>
-                    <img src="john-doe.webp" alt="Supernova" width="200" height="200">
+                    <img src="john-doe.webp" alt="Supernova">
                 </article>
                 <article class="gallery-item">
                     <strong>Player</strong>
-                    <img src="john-doe.webp" alt="Player" width="200" height="200">
+                    <img src="john-doe.webp" alt="Player">
                 </article>
                 <article class="gallery-item">
                     <strong>TheCreator</strong>
-                    <img src="john-doe.webp" alt="TheCreator" width="200" height="200">
+                    <img src="john-doe.webp" alt="TheCreator">
                 </article>
                 <article class="gallery-item">
                     <strong>Áudio: Captura 01 (Reverso)</strong>
@@ -522,14 +390,12 @@ section {
         </section>
 
         <section class="category-section novo show">
-            <section class="category-section novo show">
-    <h2>Novo</h2>
-    <div class="gallery-list"> <article class="gallery-item">
-            <strong>JOGO: O LUGAR A.H!!!</strong>
-            <img src="O-LUGAR-AH.jpeg" width="200" height="200" alt="Interface O Lugar A.H">
-        </article>
-    </div>
-</section>
+            <h2>Novo</h2>
+            <article class="gallery-item">
+                <strong>JOGO: O LUGAR A.H!!!</strong>
+                <img src="O-LUGAR-AH.jpeg" width="400" alt="Interface O Lugar A.H">
+            </article>
+        </section>
     </main>
 
     <footer>
