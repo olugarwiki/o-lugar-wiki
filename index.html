@@ -198,22 +198,29 @@
         }
 
         /* Galeria e Itens */
-        .gallery-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 0;
-        }
+   /* Altera a galeria para exibir um item embaixo do outro */
+.gallery-list {
+    display: flex;
+    flex-direction: column; /* Empilha os itens */
+    gap: 40px; /* Espaço entre cada bloco */
+    padding: 0;
+}
 
-        .gallery-item {
-            background: var(--bg-alt);
-            padding: 25px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
+/* Remove a "caixa" (fundo, bordas e padding exagerado) */
+.gallery-item {
+    background: transparent; /* Remove o fundo escuro */
+    padding: 0;               /* Remove o espaçamento interno */
+    border: none;             /* Remove a borda */
+    display: block;           /* Comportamento de texto normal */
+}
+
+/* Garante que as imagens fiquem uma embaixo da outra e centralizadas se quiser */
+.gallery-item img {
+    display: block;
+    margin: 20px 0;           /* Espaço em cima e embaixo da imagem */
+    max-width: 100%;          /* Não deixa a imagem estourar a tela */
+    height: auto;
+}
     
         audio {
             width: 100%;
@@ -258,7 +265,7 @@
 <body>
 
     <header>
-        <h1>O LUGAR</h1>
+        <h1>O LUGAR.</h1>
         <p>Wiki oficial</p>
     </header>
 
@@ -390,12 +397,14 @@
         </section>
 
         <section class="category-section novo show">
-            <h2>Novo</h2>
-            <article class="gallery-item">
-                <strong>JOGO: O LUGAR A.H!!!</strong>
-                <img src="O-LUGAR-AH.jpeg" width="400" alt="Interface O Lugar A.H">
-            </article>
-        </section>
+            <section class="category-section novo show">
+    <h2>Novo</h2>
+    <div class="gallery-list"> <article class="gallery-item">
+            <strong>JOGO: O LUGAR A.H!!!</strong>
+            <img src="O-LUGAR-AH.jpeg" width="400" alt="Interface O Lugar A.H">
+        </article>
+    </div>
+</section>
     </main>
 
     <footer>
