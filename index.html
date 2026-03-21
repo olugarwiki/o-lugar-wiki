@@ -44,6 +44,7 @@
         background-attachment: fixed;
         line-height: 1.8;
         overflow-x: hidden;
+        font-size: 1.1em; /* Texto levemente maior em todo o site */
     }
 
     header {
@@ -63,7 +64,6 @@
         text-shadow: 2px 2px 0px #550000, 0 0 20px rgba(255, 85, 85, 0.4);
     }
 
-    /* Menu de Filtros */
     .filter-container {
         position: sticky;
         top: 0;
@@ -73,7 +73,6 @@
         padding: 20px 0;
         border-bottom: 1px solid var(--border-color);
         z-index: 1000;
-        text-align: center;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -100,49 +99,50 @@
     }
 
     main {
-        max-width: 800px; /* Reduzi um pouco para o layout vertical ficar melhor */
+        max-width: 900px;
         margin: 40px auto;
         padding: 0 25px;
     }
 
-    /* Alteração para layout vertical (um em cima do outro) */
     .gallery-list {
         display: grid;
-        grid-template-columns: 1fr; /* Força uma coluna única */
-        gap: 40px;
+        grid-template-columns: 1fr;
+        gap: 50px; /* Mais espaço entre os blocos */
         padding: 0;
         list-style: none;
     }
 
-    /* Remoção do efeito de "caixa" (fundo e bordas do container) */
     .gallery-item {
-        background: transparent; /* Remove o fundo */
+        background: transparent;
         padding: 0;
-        border: none; /* Remove a borda da caixa */
+        border: none;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centraliza o conteúdo */
-        text-align: center;
+        align-items: flex-start; /* Alinha tudo à esquerda */
+        text-align: left;        /* Texto à esquerda */
     }
 
-    /* Estilização da imagem com borda */
+    /* Imagem menor e com borda */
     .gallery-item img {
-        max-width: 100%;
+        width: 100%;
+        max-width: 300px; /* Define o tamanho menor para a imagem */
         height: auto;
-        border: 2px solid var(--accent-red); /* Adiciona a borda à imagem */
+        border: 2px solid var(--accent-red);
         padding: 5px;
-        background: var(--bg-alt); /* Pequeno fundo para destacar a borda */
-        margin-bottom: 15px;
+        background: var(--bg-alt);
+        margin-bottom: 20px;
         transition: var(--transition);
     }
 
-    .gallery-item img:hover {
-        box-shadow: 0 0 15px rgba(255, 68, 68, 0.4);
+    /* Aumenta o tamanho do texto descritivo */
+    .gallery-item p, .gallery-item span {
+        font-size: 1.2em; 
+        max-width: 700px;
     }
 
     h2 {
         color: var(--accent-light-red);
-        font-size: 2em;
+        font-size: 2.2em;
         border-left: 5px solid var(--accent-red);
         padding-left: 15px;
         margin-top: 60px;
@@ -151,7 +151,7 @@
 
     audio {
         width: 100%;
-        max-width: 400px;
+        max-width: 350px;
         margin-top: 15px;
         filter: invert(90%) hue-rotate(180deg) brightness(1.2);
         height: 35px;
@@ -168,10 +168,9 @@
 
     @media (max-width: 600px) {
         header h1 { font-size: 2em; }
+        .gallery-item img { max-width: 100%; } /* No mobile ela volta a ocupar a largura disponível */
     }
 </style>
-        }
-    </style>
 </head>
 <body>
 
