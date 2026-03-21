@@ -208,7 +208,7 @@
 
 /* Remove a "caixa" (fundo, bordas e padding exagerado) */
 .gallery-item {
-    background: #000; 
+    background: transparent;
     padding: 0;               /* Remove o espaçamento interno */
     border: none;             /* Remove a borda */
     display: block;           /* Comportamento de texto normal */
@@ -259,6 +259,13 @@
         @media (max-width: 600px) {
             header h1 { font-size: 2em; letter-spacing: 4px; }
             .filter-btn { padding: 8px 12px; font-size: 0.7em; }
+
+        p {
+            color: var(--accent-orange);
+            margin-top: 35px;
+            font-size: 1.4em;
+            display: flex;
+            text-shadow: 0 0 8px rgba(255, 119, 119, 0.5);
         }
     </style>
 </head>
