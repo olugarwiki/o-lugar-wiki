@@ -265,14 +265,96 @@ audio {
       @media (max-width: 600px) {
     header h1 { font-size: 2em; letter-spacing: 4px; }
     .filter-btn { padding: 8px 12px; font-size: 0.7em; }
+          
+    (max-width: 600px) {
+    header {
+        padding: 40px 15px;
+    }
 
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        font-size: 0.8em;
+        letter-spacing: 2px;
+    }
+
+    main {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-top: 40px;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .filter-container {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .filter-btn {
+        padding: 8px 10px;
+        font-size: 0.65em;
+    }
+
+    .box {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    audio {
+        max-width: 100%;
+    }
+}
     p {
         color: var(--accent-orange);
         margin-top: 35px;
         font-size: 1.4em;
         display: flex;
-        text-shadow: 0 10 30px rgba(255, 119, 119, 0.5);
+        text-shadow: 0 10px 30px rgba(255, 119, 119, 0.5);
+
+        .filter-container {
+    overflow-x: auto;
+    justify-content: flex-start;
+}
+
+.filter-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.filter-container::-webkit-scrollbar-thumb {
+    background: var(--accent-red);
+}
+        p {
+    word-wrap: break-word;
+}
+        img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
     }
+}
+        body {
+    -webkit-text-size-adjust: 100%;
 }
     </style>
 </head>
