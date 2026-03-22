@@ -149,6 +149,40 @@
         text-transform: uppercase;
     }
 
+     /* Unificando a cor de H3 e Strong com o tema vermelho */
+h3, strong {
+    color: var(--accent-light-red); /* Usa a variável de vermelho claro para brilhar no fundo escuro */
+    text-align: left;
+    transition: var(--transition);
+}
+
+/* Ajustes específicos para o H3 (Títulos de Experimentos) */
+h3 {
+    font-size: 1.8em;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 10px rgba(255, 102, 102, 0.3); /* Brilho neon suave */
+}
+
+/* Ajuste do marcador que vem antes do H3 */
+h3::before {
+    content: '>';
+    margin-right: 12px;
+    color: var(--accent-red); /* Um vermelho mais vivo para o símbolo */
+    font-weight: bold;
+}
+
+/* Ajustes específicos para o Strong (Negrito) */
+strong {
+    font-weight: 700;
+    /* Opcional: se quiser um brilho leve nas palavras em negrito também: */
+    /* text-shadow: 0 0 5px rgba(255, 102, 102, 0.2); */
+}
+
     audio {
         width: 100%;
         max-width: 350px;
