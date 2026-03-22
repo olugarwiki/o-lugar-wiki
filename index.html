@@ -148,6 +148,24 @@
         margin-top: 60px;
         text-transform: uppercase;
     }
+      /* Cor personalizada para os títulos dos experimentos/itens */
+h3 {
+    color: #4488ff; /* Exemplo: Azul vibrante (troque pelo código da cor que desejar) */
+    margin-top: 35px;
+    font-size: 1.6em; /* Deixando um pouco maior como você pediu antes */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Se quiser mudar a cor daquele símbolo ">" que fica antes do título */
+h3::before {
+    content: '>';
+    margin-right: 10px;
+    color: var(--accent-red); /* Mantém o detalhe em vermelho ou mude também */
+    font-weight: bold;
+}
 
     audio {
         width: 100%;
