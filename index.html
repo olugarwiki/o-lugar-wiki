@@ -152,7 +152,7 @@
 h3 {
     color: #880808; 
     margin-top: 35px;
-    font-size: 1em; /* Deixando um pouco maior como você pediu antes */
+    font-size: 1,3em; /* Deixando um pouco maior como você pediu antes */
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -161,6 +161,24 @@ h3 {
 
 /* Se quiser mudar a cor daquele símbolo ">" que fica antes do título */
 h3::before {
+    content: '>';
+    margin-right: 10px;
+    color: var(--accent-red); /* Mantém o detalhe em vermelho ou mude também */
+    font-weight: bold;
+}
+
+      strong {
+    color: #880808; 
+    margin-top: 35px;
+    font-size: 1,3em; /* Deixando um pouco maior como você pediu antes */
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Se quiser mudar a cor daquele símbolo ">" que fica antes do título */
+strong::before {
     content: '>';
     margin-right: 10px;
     color: var(--accent-red); /* Mantém o detalhe em vermelho ou mude também */
