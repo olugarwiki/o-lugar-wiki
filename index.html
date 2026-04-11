@@ -191,14 +191,25 @@ strong {
         height: 35px;
     }
 
-    footer {
-        text-align: center;
-        padding: 60px 20px;
-        background: #050505;
-        color: #555;
-        border-top: 2px solid #1a1a1a;
-        margin-top: 80px;
-    }
+  footer {
+    background-color: #0a0a0a; /* O fundo preto do seu quadrado */
+    text-align: center;
+    color: #555;
+    font-family: Arial, sans-serif;
+    
+    /* A SOLUÇÃO: use padding em vez de height */
+    padding: 60px 20px; 
+    
+    /* Garante que o conteúdo fique centralizado e com largura boa */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 10px 0; /* Espaço entre as linhas de texto */
+    line-height: 1.6; /* Melhora a leitura */
+}
+
 
     @media (max-width: 600px) {
         header h1 { font-size: 2em; }
