@@ -204,6 +204,39 @@ strong {
         header h1 { font-size: 2em; }
         .gallery-item img { max-width: 100%; } /* No mobile ela volta a ocupar a largura disponível */
     }
+
+     .main-footer {
+    background-color: #1a1a1a; /* Tom de cinza escuro moderno */
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 3px solid #f39c12; /* Uma cor de destaque (ex: laranja Sunbeam) */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.restricted-access {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ff4d4d; /* Cor de alerta suave */
+    font-weight: bold;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
 </style>
 </head>
 <body>
@@ -354,10 +387,15 @@ strong {
         </section>
     
 
-    <footer>
-        <p>&copy; 2026 Sunbeam Interactive. Todos os direitos reservados. <br> 
-        Acesso restrito a pessoal autorizado.</p>
-    </footer>
+<footer class="main-footer">
+    <div class="footer-content">
+        <p class="copyright">&copy; 2026 <strong>Sunbeam Interactive</strong>. Todos os direitos reservados.</p>
+        <p class="restricted-access">
+            <span class="icon">⚠️</span> Acesso restrito a pessoal autorizado.
+        </p>
+    </div>
+</footer>
+
 
     <script>
         function filterCategory(category) {
