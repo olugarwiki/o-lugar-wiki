@@ -195,17 +195,17 @@ strong {
         .gallery-item img { max-width: 100%; } /* No mobile ela volta a ocupar a largura disponível */
     }
 
- /* Footer Corrigido: Ocupa toda a largura e usa o vermelho correto */
+ /* --- FOOTER FINAL CORRIGIDO --- */
     .main-footer {
         background-color: #0a0a0a;
         color: var(--text-color);
-        padding: 60px 0; /* Padding vertical */
+        padding: 60px 0;
         text-align: center;
-        border-top: 4px solid var(--accent-red); /* Cor exata dos botões */
-        margin-top: 80px;
-        box-shadow: 0 -10px 30px var(--shadow-color);
+        border-top: 4px solid #ff4444; /* Vermelho exato dos botões */
+        margin-top: 100px;
+        box-shadow: 0 -10px 30px rgba(0,0,0,0.9);
         
-        /* O segredo para ocupar a tela toda: */
+        /* Força a largura total ignorando os limites do 'main' ou 'body' */
         width: 100vw;
         position: relative;
         left: 50%;
@@ -215,7 +215,7 @@ strong {
     }
 
     .footer-content {
-        max-width: 900px; /* Conteúdo interno continua alinhado com o site */
+        max-width: 900px; /* Mantém o texto alinhado com o conteúdo do site */
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -228,18 +228,19 @@ strong {
         display: block;
     }
 
-    /* Estilo para o link ou nome da empresa no footer */
-    .main-footer strong, .main-footer span {
-        color: var(--accent-red);
+    /* Cor destaque para o nome da empresa */
+    .main-footer strong {
+        color: #ff4444 !important;
+        text-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
     }
 
     .restricted-access {
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: var(--accent-red); /* Vermelho dos botões */
+        color: #ff4444;
         font-weight: bold;
-        text-shadow: 0 0 10px rgba(255, 68, 68, 0.4);
+        text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
         padding: 10px 20px;
         border: 1px solid rgba(255, 68, 68, 0.3);
         display: inline-block;
@@ -247,17 +248,15 @@ strong {
     }
 
     @keyframes pulse-red {
-        0% { opacity: 0.6; }
+        0% { opacity: 0.5; }
         50% { opacity: 1; }
-        100% { opacity: 0.6; }
+        100% { opacity: 0.5; }
     }
 
-    /* Limpeza de qualquer regra antiga que possa interferir */
+    /* Limpa qualquer regra residual de 'footer' genérico */
     footer {
-        background: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        width: auto !important;
+        all: unset;
+        display: block;
     }
 </style>
 </head>
