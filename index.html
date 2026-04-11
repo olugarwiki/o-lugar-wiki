@@ -195,69 +195,14 @@ strong {
         .gallery-item img { max-width: 100%; } /* No mobile ela volta a ocupar a largura disponível */
     }
 
- /* --- FOOTER FINAL CORRIGIDO --- */
-    .main-footer {
-        background-color: #0a0a0a;
-        color: var(--text-color);
-        padding: 60px 0;
-        text-align: center;
-        border-top: 4px solid #ff4444; /* Vermelho exato dos botões */
-        margin-top: 100px;
-        box-shadow: 0 -10px 30px rgba(0,0,0,0.9);
-        
-        /* Força a largura total ignorando os limites do 'main' ou 'body' */
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-    }
-
-    .footer-content {
-        max-width: 900px; /* Mantém o texto alinhado com o conteúdo do site */
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .copyright {
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-        opacity: 0.8;
-        margin-bottom: 15px;
-        display: block;
-    }
-
-    /* Cor destaque para o nome da empresa */
-    .main-footer strong {
-        color: #ff4444 !important;
-        text-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
-    }
-
-    .restricted-access {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #ff4444;
-        font-weight: bold;
-        text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
-        padding: 10px 20px;
-        border: 1px solid rgba(255, 68, 68, 0.3);
-        display: inline-block;
-        animation: pulse-red 2s infinite;
-    }
-
-    @keyframes pulse-red {
-        0% { opacity: 0.5; }
-        50% { opacity: 1; }
-        100% { opacity: 0.5; }
-    }
-
-    /* Limpa qualquer regra residual de 'footer' genérico */
-    footer {
-        all: unset;
-        display: block;
-    }
+</section> </main> <footer class="main-footer">
+    <div class="footer-content">
+        <p class="copyright">&copy; 2026 <strong>Sunbeam Interactive</strong>. Todos os direitos reservados.</p>
+        <p class="restricted-access">
+            <span class="icon">⚠️</span> Acesso restrito a pessoal autorizado.
+        </p>
+    </div>
+</footer>
 </style>
 </head>
 <body>
@@ -407,8 +352,10 @@ strong {
             </article>
         </section>
     
-
-<footer class="main-footer">
+    
+    </section>
+    </main> 
+    <footer class="main-footer">
     <div class="footer-content">
         <p class="copyright">&copy; 2026 <strong>Sunbeam Interactive</strong>. Todos os direitos reservados.</p>
         <p class="restricted-access">
@@ -416,8 +363,6 @@ strong {
         </p>
     </div>
 </footer>
-
-
     <script>
         function filterCategory(category) {
             const sections = document.querySelectorAll('.category-section');
